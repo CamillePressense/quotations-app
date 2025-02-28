@@ -3,6 +3,8 @@ const quotationForm = document.querySelector("#quotation-form");
 const quoteText = document.querySelector("#quotation");
 const quoteAuthor = document.querySelector("#author");
 
+let quoteCount = 0;
+
 quotationForm.addEventListener('submit', submitAQuote)
 
 function submitAQuote(event){
@@ -13,6 +15,10 @@ function submitAQuote(event){
 }
 
 function addQuote(quote, author){
+    quoteCount += 1;
+    const quoteNumber = document.querySelector("#count")
+    quoteNumber.innerHTML = `${quoteCount} citations`
+
     const textParagraph = document.createElement('p');
     textParagraph.innerHTML = quote;
     textParagraph.classList.add("text");
