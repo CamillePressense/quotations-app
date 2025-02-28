@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script> 
     <title>Quotations App</title>
 </head>
 <body>
@@ -14,11 +16,10 @@
 
     <form id="quotation-form">
         <label for="quotation"> Saisis ta citation: </label>
-        <input type="text" id="quotation">
+        <input type="text" id="quotation" name="quotation">
         <label for="author"> Saisis son autrice/auteur:</label>
-        <input type="text" id="author">
-        <input type="submit" value="Soumettre" id="submitbutton">
-        
+        <input type="text" id="author" name="author">
+        <button type ="submit" id="submitbutton">Soumettre</button> 
     </form>
 
     <div id="quote-list">
